@@ -1,13 +1,15 @@
 //Clase que modela el cliente.
 
+import java.util.Scanner;
+
 public class Cliente {
     //atributos
     private String nombre;
     private int id;
-    private float saldo;
+    private double saldo;
     
     //constructor
-    public Cliente(String nombre, int id, float saldo){
+    public Cliente(String nombre, int id, double saldo){
         this.nombre=nombre;
         this.id=id;
         this.saldo=saldo;
@@ -25,14 +27,24 @@ public class Cliente {
     public void getId(int id){
       this.id=id;
     }
-    public float setSaldo(){
+    public double setSaldo(){
       return saldo;
     }
-    public void getSaldo(float saldo){
+    public void getSaldo(double saldo){
       this.saldo=saldo;
     }
     //Métodos
-    public float pagar(float precio, float ganancia){
+    public void darAlta(){
+      Scanner entrada = new Scanner(System.in);
+
+      System.out.println("Nombre:");
+      nombre = entrada.nextLine();
+      System.out.println("ID:");
+      id = entrada.nextInt();
+      System.out.println("Edad: ");
+      edad = entrada.nextInt();
+    }
+    public double pagar(double precio, double ganancia){
       if(saldo>=precio){
         ganancia=saldo-precio;
         return ganancia;
@@ -42,5 +54,5 @@ public class Cliente {
         return ganancia=0.0;
         }
     }
-    
+
 }
