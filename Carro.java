@@ -1,4 +1,7 @@
 //Clase que modela los atributos del carro.
+
+import java.util.Scanner;
+
 public class Carro{
   //atributos
   private double precio;
@@ -15,6 +18,74 @@ public class Carro{
     this.estado=estado;
     this.capacidad=capacidad;
     this.kilometraje=kilometraje;
+  }
+  //sets y gets
+  public double getPrecio(){
+    return precio;
+  }
+  
+  public void setPrecio( double precio){
+    this.precio=precio;
+  }
+
+  public int getAño(){
+    return año;
+  }
+  
+  public void setAño(int año){
+    this.año=año;
+  }
+  public String getModelo(){
+    return modelo;
+  }
+
+  public void setModelo(String modelo){
+    this.modelo=modelo;
+  }
+
+  public boolean getEstado(){
+    return estado;
+  }
+
+  public void setEstado(boolean estado){
+    this.estado=estado;
+  }
+
+  public int getCapacidad(){
+    return capacidad;
+  }
+
+  public void setCapacidad(int capacidad){
+    this.capacidad=capacidad;
+  }
+
+  public int getKilometraje(){
+    return kilometraje;
+  }
+  
+  public void setKilometraje(int kilometraje){
+    this.kilometraje=kilometraje;
+  } 
+  
+  //Métodos
+  public void darAltaCarro(){
+    Scanner entrada = new Scanner(System.in);
+    System.out.println("Precio: ");
+    precio = entrada.nextInt();
+    System.out.println("Año");
+    año = entrada.nextInt();
+    System.out.println("Modelo");
+    modelo = entrada.nextLine();
+    System.out.println("Capacidad");
+    capacidad = entrada.nextInt();
+    System.out.println("Kilometraje");
+    kilometraje = entrada.nextInt();
+  }
+  public void cambiarEstado(){
+    if (estado == true)
+      estado = false;
+    else
+     estado = true;
   }
   
 }
