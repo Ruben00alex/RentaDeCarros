@@ -15,22 +15,22 @@ public class Cliente {
         this.saldo=saldo;
     }
     //sets y gets
-    public String setNombre(){
+    public String getNombre(){
       return nombre;
     }
-    public void getNombre(String nombre){
+    public void setNombre(String nombre){
       this.nombre=nombre;
     }
-    public int setId(){
+    public int getId(){
       return id;
     }
-    public void getId(int id){
+    public void setId(int id){
       this.id=id;
     }
-    public double setSaldo(){
+    public double getSaldo(){
       return saldo;
     }
-    public void getSaldo(double saldo){
+    public void setSaldo(double saldo){
       this.saldo=saldo;
     }
     //Métodos
@@ -41,8 +41,9 @@ public class Cliente {
       nombre = entrada.nextLine();
       System.out.println("ID:");
       id = entrada.nextInt();
-      System.out.println("Edad: ");
-      edad = entrada.nextInt();
+      System.out.println("Saldo: ");
+      saldo = entrada.nextInt();
+
     }
     public double pagar(double precio, double ganancia){
       if(saldo>=precio){
