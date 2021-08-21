@@ -23,6 +23,18 @@ public class SistemaDeRentas {
 
   }
 
+  public void mostrarRentas(){
+    for(Renta renta : rentas){
+      System.out.println("Modelo: " + renta.getCarro().getModelo() + ", Precio: " + renta.getCarro().getPrecio() + ". Rentado por: "+renta.getCliente().getNombre());
+
+
+
+    }
+
+
+  }
+
+
   public void mostrarAlgo(){
     System.out.println("ALGOOO");
 

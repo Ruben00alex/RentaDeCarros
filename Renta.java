@@ -10,9 +10,13 @@ public class Renta{
 
 
   //métodos:
+  public Carro getCarro(){
+    return carroEnRenta;
+  }
 
-
-
+  public Cliente getCliente(){
+    return cliente;
+  }
 
 
 }
