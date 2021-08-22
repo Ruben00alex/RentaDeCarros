@@ -6,13 +6,13 @@ public class Inventario {
   ArrayList<Carro> carros = new ArrayList<>();
 
   public Inventario() {
-    carros.add(new Carro(40000, 2015, "Ford Focus ", true, 5, 20000));
+    carros.add(new Carro(400, 2015, "Ford Focus ", true, 5, 20000));
 
-    carros.add(new Carro(34000, 2012, "Nissan Sentra", true, 5, 15000));
+    carros.add(new Carro(340, 2012, "Nissan Sentra", true, 5, 15000));
 
-    carros.add(new Carro(40000, 2015, "Toyota Corolla", true, 5, 20000));
+    carros.add(new Carro(400, 2015, "Toyota Corolla", true, 5, 20000));
 
-    carros.add(new Carro(85000, 2015, "Rolls Royce", true, 6, 20000));
+    carros.add(new Carro(850, 2019, "Rolls Royce", true, 6, 20000));
   }
 
   public void mostrarAutos() {
@@ -29,7 +29,7 @@ public class Inventario {
       cont++;
       // ###Terminar de escribir lo que mostrara :
       System.out.println(
-          cont + ". " + "Modelo: " + carro.getModelo() + ", Precio: " + carro.getPrecio() + ". Estado: " + estado);
+          cont + ". " + "Modelo: " + carro.getModelo() +" "+carro.getAño()+ " , Precio: " + carro.getPrecio() + "$/día. Estado: " + estado);
 
     }
 
@@ -44,6 +44,19 @@ public class Inventario {
     return false;
 
   }
+
+  public void devolverRenta(Cliente clienteQueRenta){
+      for(Carro carro : carros){
+        if(!carro.getDisponible()){
+          carro.cambiarEstado();
+        }
+
+
+      }
+
+
+  }
+
 
   public ArrayList<Carro> getCarros() {
     return carros;
